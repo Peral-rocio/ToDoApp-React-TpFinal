@@ -73,13 +73,14 @@ body{
   position: relative;
 }
 
-.eye-Closed{
+.button-eyes{
   position: absolute;
   right: 220px;
   top: 50%;
   transform: translateY(-50%);
+  background: none;
+  border: none;
   cursor: pointer;
-  color: var(--color-text-primary);
 }
 
 .input-login{

@@ -1,5 +1,5 @@
 import logoapp from "./assets/logoapp.png";
-import LoginFrom from "./components/loginFrom";
+import LoginForm from "./components/loginRegistrer/loginForm.jsx";
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <header className="conteiner-header">
       <img className="img-titulo" src={logoapp} alt="imagen-titulo" />
     </header>
-    <LoginFrom />
+    <LoginForm />
     </div>
 
     </>  
