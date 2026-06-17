@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*header*/
+ 
+.headerHome{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 50px 0px 0px;
+    border: 2px solid black;
+}
+
+.buttonClose{
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--text-secundary);
+  color: white;
+  font-size: 15px;
+  border-radius: 25px;
+  border: none;
+  background-color: #3e6310;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.473);
+  transition: all 0.2s ease;
+}
+
+.buttonClose:hover{
+  background-color: #568a16b0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.473);
+  transform: translateY(-1px);
+}
+
+/*MAIN*/
+
+.main{
+    width: 100%;
+    height: 480px;
+    display: flex;
+    border: 2px solid orange;
+}
+
+
+/*TAREAS*/
+
+.conteinerTareas{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.inputTareas{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid black;
+}
+
+.tarea{
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.conteinerFiltro{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid green;
+}
+
+.filtro{
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.conteinerImg{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blueviolet;
+}
+
+.pandaBusca{
+    width: 180px;
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid olive;
+}
+
+.tupuedes{
+  position: absolute;
+    left: calc(50% - 230px); 
+    top: 50%;
+    transform: translateY(-50%);
+  
+}
+
+
+.botonAgregar{
+  width: 180px;
+  height: 40px;
+  font-family: var(--text-secundary);
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3e6310;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.473);
+  transition: all 0.2s ease;
+}
+
+.botonAgregar:hover{
+  background-color: #568a16b0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.473);
+  transform: translateY(-1px);
+}
