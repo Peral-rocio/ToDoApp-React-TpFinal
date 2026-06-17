@@ -1,5 +1,6 @@
 import { useState } from "react";
-import pandaBambu from "/src/assets/pandaBambu.png";
+import logoapp from "../../assets/logoapp.png";
+import pandaBambu from "../../assets/pandaBambu.png";
 import { Eye, EyeClosed } from "lucide-react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -97,7 +98,12 @@ function LoginForm() {
 
 
   return (
-    <>
+    <> 
+       <div className="pag-principal">
+        <header className="conteiner-header">
+          <img className="img-titulo" src={logoapp} alt="imagen-titulo" />
+        </header>
+        </div>
       <form
         className="conteiner-form"
         onSubmit={isRegister ? handleRegister : handleLogin}

@@ -23,7 +23,8 @@ body{
 
 
 .pag-principal{
-  min-height: 100vh;
+  width: 100%;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -33,7 +34,7 @@ body{
 
 .conteiner-header{
   width: 100%;
-  height: 320px;
+  height: 310px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +48,7 @@ body{
 
 .conteiner-form{
   width: 100%;
-  height: 200px;
+  height: 230px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,7 +63,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
 
 .conteiner-password{
   width: 90%;
@@ -121,12 +121,12 @@ color: var(--color-text-primary);
 
 .conteiner-registrer{
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 20px;
-  padding: 0px 90px 0px 0px;
+  padding: 0px 100px 0px 0px;
   font-size: 18px;
   font-weight: bold;
   position: relative;
@@ -156,5 +156,5 @@ color: var(--color-text-primary);
   height: 60px;
   position: absolute;
   bottom: 5px;
-  right: 20px;
+  right: 30px;
 }
