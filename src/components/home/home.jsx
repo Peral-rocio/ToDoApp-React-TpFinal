@@ -50,12 +50,12 @@ return <>
     </Link>
     </div>
      <div className={styles.contenedorNav}>
-       <Link to ="" className={styles.iconosNav}> 
+       <Link to ="/addTask" className={styles.iconosNav}> 
        <FilePlus size={40}/>
     </Link>
     </div>
      <div className={styles.contenedorNav}>
-       <Link to="" className={styles.iconosNav}> 
+       <Link to="/settings" className={styles.iconosNav}> 
        <Settings size={40}/>
     </Link>
     </div>
