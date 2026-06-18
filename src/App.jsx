@@ -1,7 +1,8 @@
 import LoginForm from "./components/loginRegistrer/loginForm.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/home/home.jsx";
-
+import AddTask from "./components/addTask/addTask.jsx";
+import Settings from "./components/settings/settings.jsx";
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
     <Routes>
       <Route path="/" element={ <LoginForm />}/>
       <Route path="/home" element= {<Home/>}/>
+      <Route path="/addTask" element = {<AddTask/>} />
+      <Route path="/settings" element = {<Settings/>} />
     </Routes>
     </BrowserRouter>
    ); 
