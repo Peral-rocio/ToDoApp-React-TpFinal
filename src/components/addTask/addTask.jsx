@@ -1,3 +1,4 @@
+import styles from "./addTask.module.css";
 
 
 function AddTask(){
