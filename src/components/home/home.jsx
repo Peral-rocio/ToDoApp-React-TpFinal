@@ -1,5 +1,5 @@
 import styles from "./home.module.css"
-import { Settings, Trash2, Check, House, FilePlus} from "lucide-react";
+import { Trash2, Check} from "lucide-react";
 import pandaBusca from "../../assets/pandaBusca.png";
 import bambooTask from "../../assets/bambooTask.png";
 import { Plus } from "lucide-react";
@@ -17,8 +17,8 @@ return <>
     <h1 className={styles.h1Tareas}>
         Tareas
     </h1>
-    <div className={styles.inputTareas}>
-        <input className={styles.tarea} type="text" />
+    <div className={styles.divTareas}>
+        <div className={styles.tarea}/>
         <button className={styles.tareaCheck}>
             <Check/>
         </button>
@@ -42,24 +42,6 @@ return <>
    </div>
     </div>   
    </main>
-
-   <footer className={styles.footer}>
-    <div className={styles.contenedorNav}>
-       <Link to="/home" className={styles.iconosNav}> 
-       <House size={40}/>
-    </Link>
-    </div>
-     <div className={styles.contenedorNav}>
-       <Link to ="/addTask" className={styles.iconosNav}> 
-       <FilePlus size={40}/>
-    </Link>
-    </div>
-     <div className={styles.contenedorNav}>
-       <Link to="/settings" className={styles.iconosNav}> 
-       <Settings size={40}/>
-    </Link>
-    </div>
-   </footer>
 
 </>
 }
