@@ -1,5 +1,4 @@
 import styles from "./addTask.module.css";
-import bambooTask from "../../assets/bambooTask.png";
 
 function AddTask(){
 return (
