@@ -51,7 +51,7 @@
   color: #4e3821;
 }
 
-.inputTareas {
+.divTareas {
   width: 100%;
   height: 50px;
   display: flex;
@@ -67,6 +67,7 @@
   font-family: var(--text-secundary);
   font-size: 20px;
   font-weight: bold;
+  background-color: white;
   border: 3px solid #ebb988;
   color: var(--color-text-primary);
 }
@@ -147,31 +148,4 @@
 
 .pandaBusca {
   width: 158px;
-}
-
-.footer {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contenedorNav {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 15px 5px #4e3821bd;
-}
-
-.iconosNav {
-  width: 50%;
-  height: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #c7b99e;
-  color: #4e3821;
 }
