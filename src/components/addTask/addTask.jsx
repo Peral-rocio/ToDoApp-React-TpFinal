@@ -1,6 +1,7 @@
 import styles from "./addTask.module.css";
 import bambooTask from "../../assets/bambooTask.png";
 import tupuedesPanda from "../../assets/tupuedesPanda.png";
+import { useTask } from "../taskContext";
 
 function AddTask() {
   return (
