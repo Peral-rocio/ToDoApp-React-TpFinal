@@ -5,6 +5,8 @@ import panditaCool from "../../assets/panditaCool.png";
 import { useState , useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Settings() {
   const [showCalendar, setShowCalendar] = useState(false);
@@ -13,7 +15,6 @@ function Settings() {
      return document.body.getAttribute("data-tema") || "light";
   });
 
-
  const cambiarTema = () => { 
   console.log("click");
   setTema((prev) => (prev === "light" ? "dark" : "light")); };
@@ -21,6 +22,26 @@ function Settings() {
   useEffect (() => {
     document.body.setAttribute ("data-tema" , tema);
   }, [tema]);
+
+  const navigate = useNavigate();
+
+  const cerrarSesion = () => {
+    Swal.fire({
+    title: "¿ Vas a Cerrar sesión?",
+    text: "¿Estás seguro?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Sí, salir",
+    cancelButtonText: "Cancelar",
+    confirmButtonColor: "#487215",
+    cancelButtonColor: "#d33",
+    }) .then ((result) =>{
+      if (result.isConfirmed) {
+        localStorage.removeItem("usuario");
+        navigate ("/");
+      }
+    })
+    }
 
   return (
     <>
@@ -66,7 +87,7 @@ function Settings() {
         <div className={styles.hijoSettings}>
 
           <div className={styles.buttonCloseSesion}>
-            <button className={styles.btnClose}>
+            <button className={styles.btnClose} onClick={cerrarSesion}>
               cerrar sesion
               </button>
           </div>
