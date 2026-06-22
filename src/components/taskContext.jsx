@@ -12,7 +12,7 @@ const tareaNueva = (texto) =>{
         texto,
         completa : false,
     }
-    setTasks (...prev => [...prev, nueva]);
+    setTasks (prev => [...prev, nueva]);
 }
 
 const borrarTarea = (id) =>{
@@ -30,4 +30,4 @@ return (
 )
 }
 
-export const useTask = () => useContext(TaskContext);
+export const useTasks = () => useContext(TaskContext);

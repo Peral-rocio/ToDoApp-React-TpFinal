@@ -4,9 +4,12 @@ import pandaBusca from "../../assets/pandaBusca.png";
 import bambooTask from "../../assets/bambooTask.png";
 import { Plus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTasks } from "../taskContext";
 
 
 function Home (){
+const {tasks, borrarTarea, marcarTarea} = useTasks ();
+     
 return <>
   <header className={styles.headerHome}>
     <img className={styles.logoBambooTask} src={bambooTask} alt="logo panda feliz" />
