@@ -1,10 +1,18 @@
-import { createContext, useContext , useState } from "react";
+import { createContext, useContext , useState , useEffect } from "react";
 
 const TaskContext = createContext();
 
 export const TaskProvider = ({children}) => {
 
-    const [tasks , setTasks] = useState ([]);
+    const [tasks , setTasks] = useState (() => {
+        const tareasGuardadas = localStorage.getItem("tasks");
+        return tareasGuardadas ? JSON.parse (tareasGuardadas) : [];
+    });
+
+    useEffect (()=> {
+        localStorage.setItem("tasks", JSON.stringify (tasks));
+    }, [tasks]);
+
 
 const tareaNueva = (texto) =>{
     const nueva = {
