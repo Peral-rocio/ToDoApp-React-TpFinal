@@ -2,12 +2,25 @@ import styles from "./settings.module.css";
 import bambooTask from "../../assets/bambooTask.png";
 import { SunMoon, Calendar1, X } from "lucide-react";
 import panditaCool from "../../assets/panditaCool.png";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
 function Settings() {
   const [showCalendar, setShowCalendar] = useState(false);
+
+  const [tema , setTema] = useState(() =>{
+     return document.body.getAttribute("data-tema") || "light";
+  });
+
+
+ const cambiarTema = () => { 
+  console.log("click");
+  setTema((prev) => (prev === "light" ? "dark" : "light")); };
+
+  useEffect (() => {
+    document.body.setAttribute ("data-tema" , tema);
+  }, [tema]);
 
   return (
     <>
@@ -22,12 +35,17 @@ function Settings() {
  
       <div className={styles.padreSettings}>
         <div className={styles.hijoSettings}>
-          <div className={styles.modoClaro}>
-            <SunMoon size={60} color="#4e3821f8" />
+          <div className={styles.modoClaro}
+          onClick={cambiarTema}>
+            {tema === "light" ? (
+              <SunMoon size={60} color="#4e3821f8" />
+            ): (
+                <SunMoon size={60} color="#4e3821f8" />
+            )}
           </div>
 
           <div className={styles.calendario}  onClick={() => setShowCalendar((prev) => !prev)} >
-            <Calendar1 size={60} color="#4e3821f8"/>.
+            <Calendar1 size={60} color="#4e3821f8"/>
           </div>
         </div>
 
@@ -67,3 +85,4 @@ function Settings() {
 }
 
 export default Settings;
+

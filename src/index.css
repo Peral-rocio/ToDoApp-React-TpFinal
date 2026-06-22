@@ -21,6 +21,13 @@ body{
    font-family: var(--text-font);
 }
 
+body[data-tema= "dark"] {
+   background-color: #1A1A1A;
+   width: 100%;
+  min-height: 100vh;
+   font-family: var(--text-font);
+   border: none;
+}
 
 .pag-principal{
   width: 100%;

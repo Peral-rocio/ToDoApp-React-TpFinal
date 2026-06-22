@@ -30,6 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #c7b99e;
+  /* background-color: #c7b99e; */
   color: #4e3821;
+  background-color: transparent;
 }
