@@ -34,3 +34,7 @@
   color: #4e3821;
   background-color: transparent;
 }
+
+[data-tema= "dark"] .iconosNav{
+  color: white;
+}
