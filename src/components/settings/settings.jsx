@@ -61,12 +61,12 @@ function Settings() {
             {tema === "light" ? (
               <SunMoon size={60} color="#4e3821f8" />
             ): (
-                <SunMoon size={60} color="#4e3821f8" />
+                <SunMoon size={60} color="white" />
             )}
           </div>
 
           <div className={styles.calendario}  onClick={() => setShowCalendar((prev) => !prev)} >
-            <Calendar1 size={60} color="#4e3821f8"/>
+            <Calendar1  className={styles.calendar1} size={60} color="#4e3821f8"/>
           </div>
         </div>
 

@@ -50,6 +50,10 @@
   color: #4e3821;
 }
 
+[data-tema= "dark"] .h1Tareas{
+  color: white;
+}
+
 .divTareas {
   width: 100%;
   height: 50px;
