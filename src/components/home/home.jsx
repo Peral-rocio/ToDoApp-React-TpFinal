@@ -20,15 +20,23 @@ return <>
     <h1 className={styles.h1Tareas}>
         Tareas
     </h1>
-    <div className={styles.divTareas}>
-        <div className={styles.tarea}/>
-        <button className={styles.tareaCheck}>
+
+     {tasks.map (task => (
+          <div key={task.id} className={styles.divTareas}>
+        <div className= {`${styles.tarea} ${task.completa ? styles.tareaCompleta : ""}`}>
+        {task.texto}
+        </div>
+        <button className= {styles.tareaCheck}
+        onClick={() => marcarTarea (task.id)}>
             <Check/>
         </button>
-        <button className={styles.tareaTrash}>
+        <button className={styles.tareaTrash}
+        onClick={() => borrarTarea (task.id)}>
             <Trash2/>
         </button>
     </div> 
+     )) }    
+  
 
     </div>
     <div className={styles.conteinerFiltro}>
