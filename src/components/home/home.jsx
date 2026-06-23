@@ -5,10 +5,20 @@ import bambooTask from "../../assets/bambooTask.png";
 import { Plus } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTasks } from "../taskContext";
+import { use } from "react";
+import { useState } from "react";
+import { Filter } from "lucide-react";
 
 
 function Home (){
 const {tasks, borrarTarea, marcarTarea} = useTasks ();
+const [filtro, setFiltro] = useState ("Todas");
+
+const tareasFiltrada = tasks.filter ( task => {
+    if (filtro === "Completas") return task.completa;
+    if (filtro === "Incompletas") return !task.completa;
+    return true;
+});
      
 return <>
   <header className={styles.headerHome}>
@@ -21,7 +31,7 @@ return <>
         Tareas
     </h1>
 
-     {tasks.map (task => (
+     {tareasFiltrada.map (task => (
           <div key={task.id} className={styles.divTareas}>
         <div className= {`${styles.tarea} ${task.completa ? styles.tareaCompleta : ""}`}>
         {task.texto}
@@ -43,7 +53,8 @@ return <>
         <h1 className= {styles.h1Tareas}>
             Filtrar Tarea
         </h1>
-        <select className={styles.SelectContenedor} >
+        <select className={styles.SelectContenedor} value={filtro}
+        onChange={(e) => setFiltro(e.target.value)} >
             <option value="Todas">Todas</option>
             <option value="Completas">Completas</option>
             <option value="Incompletas">Incompletas</option>
