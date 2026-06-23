@@ -76,6 +76,8 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  word-break: break-word;
+  white-space: normal;
 }
 
 .tarea:focus {
@@ -84,7 +86,7 @@
 
 .tareaCompleta{
   text-decoration: line-through;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .checkOn{
@@ -163,4 +165,157 @@
 
 .pandaBusca {
   width: 158px;
+}
+
+
+/*RESPONSIVE*/
+
+/*TABLET*/
+
+@media (max-width: 768px ) {
+.main {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteinerTareas {
+  width: 100%;
+  padding: 20px;
+}
+
+.h1Tareas {
+  margin: 5px;
+}
+
+.divTareas {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarea {
+  width: 70%;
+  min-height: 40px;
+  padding-left: 15px;
+  font-size: 16px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.tareaCompleta{
+  opacity: 0.5;
+}
+
+.check{
+width: 30px !important;
+}
+
+.tareaCheck {
+  width: 10%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.tareaTrash {
+  width: 10%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.Trash2{
+  width: 30px !important;
+}
+
+/* CONTENEDOR DE FILTROS */
+.conteinerFiltro {
+  width: 100%;
+}
+
+.SelectContenedor {
+  width: 45%;
+  height: 40px;
+}
+
+.pandaBusca {
+  width: 130px;
+}
+}
+
+/*MOBILE*/
+
+@media (max-width: 320px ) {
+.main {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteinerTareas {
+  width: 100%;
+  padding: 20px;
+}
+
+.h1Tareas {
+  margin: 10px;
+}
+
+.divTareas {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarea {
+  width: 65%;
+  min-height: 35px;
+  padding-left: 15px;
+  font-size: 14px;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.tareaCompleta{
+  opacity: 0.5;
+}
+
+.check{
+width: 20px !important;
+}
+
+.tareaCheck {
+  width: 13%;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.tareaTrash {
+  width: 13%;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.Trash2{
+  width: 20px !important;
+}
+
+/* CONTENEDOR DE FILTROS */
+.conteinerFiltro {
+  width: 100%;
+}
+
+.SelectContenedor {
+  width: 85%;
+  height: 35px;
+}
+
+.pandaBusca {
+  width: 130px;
+}
 }
