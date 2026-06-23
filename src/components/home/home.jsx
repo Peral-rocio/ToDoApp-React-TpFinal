@@ -4,9 +4,22 @@ import pandaBusca from "../../assets/pandaBusca.png";
 import bambooTask from "../../assets/bambooTask.png";
 import { Plus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTasks } from "../taskContext";
+import { use } from "react";
+import { useState } from "react";
+import { Filter } from "lucide-react";
 
 
 function Home (){
+const {tasks, borrarTarea, marcarTarea} = useTasks ();
+const [filtro, setFiltro] = useState ("Todas");
+
+const tareasFiltrada = tasks.filter ( task => {
+    if (filtro === "Completas") return task.completa;
+    if (filtro === "Incompletas") return !task.completa;
+    return true;
+});
+     
 return <>
   <header className={styles.headerHome}>
     <img className={styles.logoBambooTask} src={bambooTask} alt="logo panda feliz" />
@@ -17,22 +30,31 @@ return <>
     <h1 className={styles.h1Tareas}>
         Tareas
     </h1>
-    <div className={styles.divTareas}>
-        <div className={styles.tarea}/>
-        <button className={styles.tareaCheck}>
+
+     {tareasFiltrada.map (task => (
+          <div key={task.id} className={styles.divTareas}>
+        <div className= {`${styles.tarea} ${task.completa ? styles.tareaCompleta : ""}`}>
+        {task.texto}
+        </div>
+        <button className= {styles.tareaCheck}
+        onClick={() => marcarTarea (task.id)}>
             <Check/>
         </button>
-        <button className={styles.tareaTrash}>
+        <button className={styles.tareaTrash}
+        onClick={() => borrarTarea (task.id)}>
             <Trash2/>
         </button>
     </div> 
+     )) }    
+  
 
     </div>
     <div className={styles.conteinerFiltro}>
         <h1 className= {styles.h1Tareas}>
             Filtrar Tarea
         </h1>
-        <select className={styles.SelectContenedor} >
+        <select className={styles.SelectContenedor} value={filtro}
+        onChange={(e) => setFiltro(e.target.value)} >
             <option value="Todas">Todas</option>
             <option value="Completas">Completas</option>
             <option value="Incompletas">Incompletas</option>

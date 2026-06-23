@@ -1,8 +1,22 @@
 import styles from "./addTask.module.css";
 import bambooTask from "../../assets/bambooTask.png";
 import tupuedesPanda from "../../assets/tupuedesPanda.png";
+import { useTasks } from "../taskContext";
+import { useState } from "react";
 
 function AddTask() {
+     const {tareaNueva} = useTasks () ; 
+     const [texto, setTexto] = useState ('');
+
+     const add = () => {
+      if (texto.trim() === ''){
+        return
+      }
+      tareaNueva(texto)
+      setTexto ('')
+     }
+
+
   return (
     <>
       <header className={styles.headerAdd}>
@@ -17,6 +31,8 @@ function AddTask() {
         <div className={styles.textArea}>
           <textarea
             className={styles.addtarea}
+            value={texto}
+            onChange={(e) => setTexto (e.target.value)}
             placeholder="Escribe tu tarea"
             maxLength={100}
             required
@@ -30,7 +46,7 @@ function AddTask() {
               alt="panda Tu puedes hacerlo"
             />
           </div>
-          <button className={styles.buttonAddTarea}>Agregar Tarea</button>
+          <button className={styles.buttonAddTarea} onClick={add} >Agregar Tarea</button>
         </div>
       </section>
     </>
