@@ -8,6 +8,7 @@ import { useTasks } from "../taskContext";
 import { use } from "react";
 import { useState } from "react";
 import { Filter } from "lucide-react";
+import Swal from "sweetalert2";
 
 
 function Home (){
@@ -20,6 +21,23 @@ const tareasFiltrada = tasks.filter ( task => {
     return true;
 });
      
+const confirmarBorrado = (id) => {
+  Swal.fire({
+    title: "¿Eliminar tarea?",
+    text: "Esta acción no se puede deshacer.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Sí, borrar",
+    cancelButtonText: "Cancelar",
+    confirmButtonColor: "#487215",
+    cancelButtonColor: "#d33",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      borrarTarea(id);
+    }
+  });
+};
+
 return <>
   <header className={styles.headerHome}>
     <img className={styles.logoBambooTask} src={bambooTask} alt="logo panda feliz" />
@@ -41,7 +59,7 @@ return <>
             <Check/>
         </button>
         <button className={styles.tareaTrash}
-        onClick={() => borrarTarea (task.id)}>
+        onClick={() => confirmarBorrado(task.id)}>
             <Trash2/>
         </button>
     </div> 
