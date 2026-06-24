@@ -12,17 +12,17 @@ function Layout() {
         <div className={styles.nav}>
           <div className={styles.contenedorNav}>
             <Link to="/home" className={styles.iconosNav}>
-              <House size={40} />
+              <House  className={styles.ico}  size={40} />
             </Link>
           </div>
           <div className={styles.contenedorNav}>
             <Link to="/addTask" className={styles.iconosNav}>
-              <FilePlus size={40} />
+              <FilePlus  className={styles.ico}   size={40} />
             </Link>
           </div>
           <div className={styles.contenedorNav}>
             <Link to="/settings" className={styles.iconosNav}>
-              <Settings size={40} />
+              <Settings   className={styles.ico}  size={40} />
             </Link>
           </div>
         </div>
