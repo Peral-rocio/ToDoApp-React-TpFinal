@@ -12,7 +12,7 @@ function Settings() {
   const [showCalendar, setShowCalendar] = useState(false);
 
   const [tema , setTema] = useState(() =>{
-     return document.body.getAttribute("data-tema") || "light";
+     return localStorage.getItem("data-tema") || "light";
   });
 
  const cambiarTema = () => { 
@@ -21,6 +21,7 @@ function Settings() {
 
   useEffect (() => {
     document.body.setAttribute ("data-tema" , tema);
+      localStorage.setItem("tema", tema);
   }, [tema]);
 
   const navigate = useNavigate();
@@ -38,6 +39,8 @@ function Settings() {
     }) .then ((result) =>{
       if (result.isConfirmed) {
         localStorage.removeItem("usuario");
+         localStorage.removeItem("tema");
+        document.body.setAttribute("data-tema", "light")
         navigate ("/");
       }
     })
