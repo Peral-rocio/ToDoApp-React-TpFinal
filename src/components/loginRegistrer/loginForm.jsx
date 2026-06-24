@@ -132,9 +132,9 @@ function LoginForm() {
              type="button" onClick={ () => setShowPassword((prev) => !prev)} //aqui tuve problemas y tuve que investigar como resolver,sali esto en internet. prev (estado previo a cambiar)
           >
             {showPassword ? (
-              <Eye className="eyes" size={20} strokeWidth={2.5} />
+              <Eye className="eyes" size={20} strokeWidth={1.5} />
             ) : (
-              <EyeClosed className="eyes" size={20} strokeWidth={2.5} />
+              <EyeClosed className="eyes" size={20} strokeWidth={1.5} />
             )}
           </button>
         </div>
@@ -154,7 +154,7 @@ function LoginForm() {
             setPassword("");
           }}
         >
-          {isRegister ? "iniciar Sesion" : "registrarse"}
+          {isRegister ? "iniciar Sesion" : "Registrarse"}
         </button>
         <img
           className="pandaBambu"

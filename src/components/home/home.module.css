@@ -89,8 +89,8 @@
   opacity: 0.6;
 }
 
-.checkOn{
-  background-color: green;
+[data-tema = "dark"] .check{
+    color: white;
 }
 
 .tareaCheck {
@@ -109,6 +109,10 @@
   transform: translateY(-1px);
 }
 
+[data-tema = "dark"] .tareaCheck{
+  background-color: #7cc720a4; ;
+}
+
 .tareaTrash {
   width: 10%;
   height: 35px;
@@ -123,6 +127,14 @@
 .tareaTrash:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.473);
   transform: translateY(-1px);
+}
+
+[data-tema = "dark"] .tareaTrash{
+  background-color: #d67f77 ;
+}
+
+[data-tema = "dark"] .Trash2{
+  color: white;
 }
 
 /* CONTENEDOR DE FILTROS */
