@@ -7,7 +7,7 @@ import Layout from "./components/layout/layout.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ToDoApp-React-TpFinal/">
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route element={<Layout />}>
