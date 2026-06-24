@@ -59,9 +59,9 @@ function Settings() {
           <div className={styles.modoClaro}
           onClick={cambiarTema}>
             {tema === "light" ? (
-              <SunMoon size={60} color="#4e3821f8" />
+              <SunMoon className= {styles.SunMoon}  size={60} color="#4e3821f8" />
             ): (
-                <SunMoon size={60} color="white" />
+                <SunMoon className= {styles.SunMoon} size={60} color="white" />
             )}
           </div>
 

@@ -132,3 +132,100 @@
 .imgPanditaCool {
   width: 200px;
 }
+
+/*RESPONSIVE*/
+
+/*TABLET*/
+
+@media (max-width: 768px ) {
+
+.modalCalendar{
+  width: 60%;
+  height: 60%;
+}
+
+.btnClose{
+  width: 220px;
+  height: 55px;
+  font-size: 25px;
+  border-radius: 25px;
+}
+
+.imgPanditaCool {
+  width: 100px;
+}
+}
+
+/*Mobile*/
+
+@media (max-width: 320px ) {
+
+.padreSettings {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hijoSettings {
+  width: 100%;
+  height: 50%;
+  box-shadow: none;
+}
+
+.modoClaro {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.calendario {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.modalCalendar{
+  width: 90%;
+  height: 80%;
+}
+
+.SunMoon{
+  width: 45px !important;
+}
+
+.calendar1{
+  width: 45px !important;
+}
+
+.buttonCloseSesion {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:60;
+  color: #4e3821f8;
+    box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.btnClose{
+   width: 150px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+.imgPanditaCool {
+  width: 100px;
+}
+}
