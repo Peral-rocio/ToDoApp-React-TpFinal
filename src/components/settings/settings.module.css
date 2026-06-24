@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerSettings {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 15px 5px #4e3821bd;
+}
+
+.bambooSettings {
+  width: 280px;
+}
+
+.padreSettings {
+  width: 100%;
+  height: 480px;
+  display: flex;
+}
+
+.hijoSettings {
+  width: 50%;
+ box-shadow: 0px 0px 15px 5px #4e3821bd;
+}
+
+.modoClaro {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 15px 5px #4e3821bd;
+
+}
+
+/* CALENDARIO*/
+
+.calendario {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.modalOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.842);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.modalCalendar{
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.closeButtonModal{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+  background-color: #C7B99E;
+  transition: all 0.2s ease;
+
+}
+
+[data-tema= "dark"] .calendar1{
+  stroke: white;
+}
+
+.buttonCloseSesion {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:60;
+  color: #4e3821f8;
+    box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.btnClose{
+   width: 200px;
+  height: 45px;
+  font-family: var(--text-secundary);
+  color: white;
+  font-size: 25px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3e6310;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.473);
+  transition: all 0.2s ease;
+}
+
+.btnClose:hover{
+  background-color: #568a16b0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.473);
+  transform: translateY(-1px);
+}
+
+.pandaCool {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.imgPanditaCool {
+  width: 200px;
+}
+
+/*RESPONSIVE*/
+
+/*TABLET*/
+
+@media (max-width: 768px ) {
+
+.modalCalendar{
+  width: 60%;
+  height: 60%;
+}
+
+.btnClose{
+  width: 180px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 25px;
+}
+
+.imgPanditaCool {
+  width: 150px;
+}
+}
+
+/*Mobile*/
+
+@media (max-width: 320px ) {
+
+.padreSettings {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hijoSettings {
+  width: 100%;
+  height: 50%;
+  box-shadow: none;
+}
+
+.modoClaro {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.calendario {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.modalCalendar{
+  width: 90%;
+  height: 80%;
+}
+
+.SunMoon{
+  width: 45px !important;
+}
+
+.calendar1{
+  width: 45px !important;
+}
+
+.buttonCloseSesion {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:60;
+  color: #4e3821f8;
+    box-shadow: 5px 5px 15px 5px #4e3821bd;
+}
+
+.btnClose{
+   width: 150px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 15px;
+}
+
+.imgPanditaCool {
+  width: 100px;
+}
+}

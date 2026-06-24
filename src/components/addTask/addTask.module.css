@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.headerAdd {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 15px 5px #4e3821bd;
+}
+
+.logoBambooAdd {
+  width: 260px;
+}
+
+/*Section*/
+
+.sectionAdd {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  box-shadow: 0px 0px 15px 5px #4e3821bd;
+}
+
+.textArea {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addtarea {
+  width: 70%;
+  height: 70%;
+  padding: 20px;
+  border: 3px solid #f4b6c2;
+  font-family: "Fredoka", sans-serif;
+  font-size: 25px;
+  color: #4a4a4a;
+}
+
+.addtarea:focus {
+  outline-color: #f4b6c2;
+}
+
+.contenedorButtonAdd {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttonAddTarea {
+  width: 250px;
+  height: 50px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #4e3821;
+  background-color: #ebb988;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.473);
+  transition: all 0.2s ease;
+}
+
+.buttonAddTarea:hover {
+  background-color: #ebb988;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.473);
+  transform: translateY(-1px);
+}
+
+.pandaPuedesHacerlo {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgPandaPuedes {
+  width: 200px;
+}
+
+
+/*MODO RESPOSIVE */
+/*Tablet*/
+
+@media (max-width: 768px ){
+.sectionAdd {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  box-shadow: 0px 0px 15px 5px #4e3821bd;
+}
+
+.textArea {
+  width: 60%;
+  display: flex;
+}
+
+.addtarea {
+  width: 80%;
+  height: 70%;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.contenedorButtonAdd {
+  width: 40%;
+}
+
+.imgPandaPuedes {
+  width: 170px;
+}
+}
+
+
+/*mobile*/
+@media (max-width: 320px ) {
+
+.sectionAdd {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textArea {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addtarea {
+  width: 80%;
+  height: 80%;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.contenedorButtonAdd {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttonAddTarea {
+  width: 180px;
+  height: 30px;
+  font-size: 18px;
+
+}
+
+.imgPandaPuedes {
+  width: 120px;
+}
+}
+
+
