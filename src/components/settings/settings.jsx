@@ -21,7 +21,7 @@ function Settings() {
 
   useEffect (() => {
     document.body.setAttribute ("data-tema" , tema);
-      localStorage.setItem("tema", tema);
+      localStorage.setItem("data-tema", tema);
   }, [tema]);
 
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ function Settings() {
     }) .then ((result) =>{
       if (result.isConfirmed) {
         localStorage.removeItem("usuario");
-         localStorage.removeItem("tema");
+         localStorage.removeItem("data-tema");
         document.body.setAttribute("data-tema", "light")
         navigate ("/");
       }

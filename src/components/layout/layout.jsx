@@ -1,8 +1,13 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "./layout.module.css";
 import { Settings, House, FilePlus } from "lucide-react";
+import { useEffect } from "react";
 
 function Layout() {
+  useEffect(() => {
+    const tema = localStorage.getItem("data-tema") || "light";
+    document.body.setAttribute("data-tema", tema);}, []);
+  
   return (
     <>
       <div className={styles.LayoutContenedor}>
