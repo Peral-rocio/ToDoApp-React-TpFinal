@@ -79,7 +79,7 @@ body[data-tema="dark"] {
 
 .button-eyes {
   position: absolute;
-  right: 150px;
+  right: 180px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
