@@ -56,11 +56,11 @@ return <>
         </div>
         <button className= {styles.tareaCheck}
         onClick={() => marcarTarea (task.id)}>
-            <Check/>
+            <Check className={styles.check}/>
         </button>
         <button className={styles.tareaTrash}
         onClick={() => confirmarBorrado(task.id)}>
-            <Trash2/>
+            <Trash2 className={styles.Trash2}/>
         </button>
     </div> 
      )) }    
